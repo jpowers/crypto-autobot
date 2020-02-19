@@ -6,7 +6,11 @@ task :trade do
     # ENVs can't have '-' so we need to replace _ with - to get product name
     product_id = product.sub('_','-')
     if products.map(&:id).include? product_id
-      Autobuy::Base.new(product: product_id).buy(usd_amount: amount)
+      begin
+        Autobuy::Base.new(product: product_id).buy(usd_amount: amount)
+      rescue => e
+        puts "Error: BUY #{product_id} $#{amount} - #{e}"
+      end
     else
       puts "Sorry, no Coinbase Pro product: #{product_id}."
     end
