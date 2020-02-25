@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/jpowers/coinbase-exchange-ruby
+  revision: 032ccf90d7d928af1cc94380ea492321a80ab1b1
+  specs:
+    coinbase-exchange (0.2.0)
+      bigdecimal
+      em-http-request
+      faye-websocket
+
 PATH
   remote: .
   specs:
@@ -10,10 +19,6 @@ GEM
       public_suffix (>= 2.0.2, < 5.0)
     bigdecimal (2.0.0)
     coderay (1.1.2)
-    coinbase-exchange (0.2.0)
-      bigdecimal
-      em-http-request
-      faye-websocket
     cookiejar (0.3.3)
     dotenv (2.7.5)
     em-http-request (1.1.5)
@@ -46,7 +51,7 @@ PLATFORMS
 DEPENDENCIES
   autobuy!
   bundler (~> 1.17)
-  coinbase-exchange
+  coinbase-exchange!
   dotenv
   minitest (~> 5.0)
   pry
